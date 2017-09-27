@@ -1,0 +1,22 @@
+.item{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.shirtList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: space-around;
+
+}
+    img{ 
+        width: 300px;
+        height: 300px;
+    }

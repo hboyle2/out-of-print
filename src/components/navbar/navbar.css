@@ -1,0 +1,55 @@
+/* body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    text-transform: none;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+} */
+
+
+.bob{
+    height: 30px;
+}
+
+.navbar{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    text-transform: none;
+    font-weight: 700;
+    color: #444444;
+    text-transform: uppercase;
+}
+
+.dropdown{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    
+   
+}
+
+.shop{
+    padding-right: 30px;
+}
+
+.collections{
+    padding-right: 30px;  
+}
+
+.shop-by{
+    padding-right: 30px;
+}
+
+.story{
+    padding-right: 30px;
+}
