@@ -25,7 +25,7 @@ export default class WomensSweatshirts extends Component {
 
               <Link to = {`/collections/womens-tees/products/${shirt.slug}`}>
              
-               <div><img src={shirt.img}/></div>
+               <div><img alt = '' src={shirt.img}/></div>
                 <div>{shirt.name}</div>
                 <div>{shirt.gender}</div>
                 </Link>

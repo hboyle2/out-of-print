@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './Searchbar.css'
+import './Searchbar.css';
+import {Link} from 'react-router-dom';
 
 class Searchbar extends Component {
     render() {
@@ -9,7 +10,7 @@ class Searchbar extends Component {
                <div className='cart'>
                    <div>Q</div>
                    <div>My Account</div>
-                   <div>My Bags</div>
+                 <Link to ='/cart'><div>My Bags</div></Link>  
                 </div> 
             </div>
             

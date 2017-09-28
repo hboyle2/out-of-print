@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './singleview.css'
+import './singleview.css';
+import {connect} from 'react-redux';
+import {addToShoppingCart} from '../../ducks/reducer'
 
-export default class SingleView extends Component {
+class SingleView extends Component {
     constructor(){
         super()
         this.state = {
@@ -29,15 +31,17 @@ export default class SingleView extends Component {
 
     
     render() {
-        console.log(this.props.match.params.slug)
+        const item=this.state.item
+       
+        console.log(this.state.item)
         return (
             <div className="item">
-              <img src={this.state.item.img} /> 
+              <img alt='' src={this.state.item.img} /> 
              <div className='details'>
              <h1>{this.state.item.name}</h1> 
              <div>{this.state.item.type}</div> 
              <div>${this.state.item.price}</div>
-             <button>Add to Cart</button>
+             <button onClick={() => this.props.addToShoppingCart(item)}>Add to Cart</button>
              </div>
              
              
@@ -45,4 +49,11 @@ export default class SingleView extends Component {
         );
     }
 }
+
+function mapStateToProps(state) {
+    return {
+       
+    }
+}
+export default connect( mapStateToProps, {addToShoppingCart})(SingleView);
 

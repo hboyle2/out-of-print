@@ -37,3 +37,19 @@ Values
 ('Library-Stamp-womens-sweatshirt', 'Library Stamp', 'sweatshirt', 'grey', 'unisex', 'https://cdn.shopify.com/s/files/1/0380/6785/products/Fleece_LS_Library_Stamp_websize_2048x2048.jpg?v=1475549715','https://cdn.shopify.com/s/files/1/0380/6785/products/Womens_Fleece_Library-Stamp_websize_2048x2048.jpg?v=1475549809',42),
 ('brown-bear-brown-bear-what-do-you-see-mens-book-t-shirt', 'World of Eric Carle: Brown Bear, Brown Bear, What do you see?', 't-shirt', 'grey', 'unisex', 'https://cdn.shopify.com/s/files/1/0380/6785/products/B-1142_Brown-Bear-Brown-Bear-What-Do-You-See_Mens_Book_T-Shirt_1_2048x2048.jpg?v=1465396312', 'https://cdn.shopify.com/s/files/1/0380/6785/products/U-2006_Harold-and-the-Purple-Crayon_unisex_Long-Sleeve_Fleece_2_2048x2048.jpg?v=1445955505', 20),
 ('Corduroy-mens-t-shirt', 'Corduroy', 't-shirt', 'red', 'unisex', 'https://cdn.shopify.com/s/files/1/0380/6785/products/B-1140_Corduroy_Mens_Book_T-Shirt_1_2048x2048.jpg?v=1465394236','https://cdn.shopify.com/s/files/1/0380/6785/products/B-1140_Corduroy_Mens_Book_T-Shirt_3_2048x2048.jpg?v=1465394262',28)
+
+
+-- create table lineItems(
+-- id Serial Primary Key,
+-- product_id INT REFERENCES items (id),
+-- order_id INT REFERENCES orders (id),
+-- Qty INT
+-- );
+
+-- create table orders (
+-- id serial primary key,
+-- shipping VARCHAR(500),
+-- billing VARCHAR(500),
+-- order_date DATE,
+-- total int,
+-- userid int);

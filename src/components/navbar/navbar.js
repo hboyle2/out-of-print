@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <div className='navbar'>
-               <Link to = '/'><img className='bob' src='https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/logo-out-of-print.png?3105792032285812475'/></Link>
+               <Link to = '/'><img alt ='' className='bob' src='https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/logo-out-of-print.png?3105792032285812475'/></Link>
               <div className="dropdown">
               <div className="shop">Shop</div>
                <div className="collections">Collections</div>
