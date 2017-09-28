@@ -1,0 +1,32 @@
+/* .details{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: space-between;
+}
+
+.item
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab', serif;
+        color: #000;
+        text-align: center;
+    }
+
+h1{
+    
+    font-size: 35px;
+}
+
+.item img{
+    width: 60%;
+    height: 60%;
+} */

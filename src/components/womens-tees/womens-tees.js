@@ -14,7 +14,7 @@ export default class WomensTees extends Component {
 
     componentDidMount(){ 
          
-    axios.get('/api/list').then(response=>{
+    axios.get('/api/womens/tshirts').then(response=>{
         this.setState({
             shirts: response.data
         })
