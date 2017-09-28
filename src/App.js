@@ -6,12 +6,14 @@ import HomePage from './components/homePage/homePage';
 import WomensTees from './components/womens-tees/womens-tees';
 import SingleView from './components/singleitemview/SingleView';
 import WomensSweatshirts from './components/Womens-Sweatshirts/Womens-Sweatshirts';
+import Searchbar from './components/searchbar/searchbar'
 import {HashRouter,Switch, Route} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Searchbar/>
         <Navbar/>
       
         <HashRouter>

@@ -14,7 +14,8 @@ massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
 }).catch(err => console.log(err))
 
-app.get('/api/womens/tshirts', ctrl.getList)
+app.get('/api/womens/tshirts', ctrl.getWomensTees)
+app.get('/api/womens/sweatshirts', ctrl.getWomensSweatshirts)
 app.get(`/api/item/:slug`, ctrl.getItem)
 
 

@@ -5,6 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	align-content: space-around;
+	text-decoration: none;
 }
 
 .shirtList {
@@ -13,7 +14,12 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
-    align-content: space-around;
+	align-content: space-around;
+	text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
 
 }
     img{ 

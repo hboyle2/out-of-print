@@ -37,6 +37,7 @@ export default class SingleView extends Component {
              <h1>{this.state.item.name}</h1> 
              <div>{this.state.item.type}</div> 
              <div>${this.state.item.price}</div>
+             <button>Add to Cart</button>
              </div>
              
              

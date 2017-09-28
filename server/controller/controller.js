@@ -1,8 +1,17 @@
 module.exports = {
-    getList(req,res) {
+    getWomensTees(req,res) {
         const db = req.app.get('db');
    
         db.womens_tshirts([])
+        .then((items)=> { res.send(items);
+       }).catch((err) => {console.log(err);});
+         
+       },
+      
+    getWomensSweatshirts(req,res) {
+        const db = req.app.get('db');
+   
+        db.womens_sweatshirts([])
         .then((items)=> { res.send(items);
        }).catch((err) => {console.log(err);});
          

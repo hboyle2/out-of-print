@@ -28,7 +28,7 @@ export default class WomensTees extends Component {
             console.log(shirt)
             return( <div key={shirt.id} className='item' >
 
-              <Link to = {`/collections/womens-tees/products/${shirt.slug}`}>
+              <Link to = {`/collections/womens-tees/products/${shirt.slug}`} >
              
                <div><img src={shirt.img}/></div>
                 <div>{shirt.name}</div>
