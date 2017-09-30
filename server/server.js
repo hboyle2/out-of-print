@@ -17,6 +17,7 @@ massive(process.env.CONNECTION_STRING).then( db => {
 app.get('/api/womens/tshirts', ctrl.getWomensTees)
 app.get('/api/womens/sweatshirts', ctrl.getWomensSweatshirts)
 app.get(`/api/item/:slug`, ctrl.getItem)
+app.post(`/api/cart`, ctrl.getOrder)
 
 
 

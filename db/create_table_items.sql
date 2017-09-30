@@ -52,4 +52,14 @@ Values
 -- billing VARCHAR(500),
 -- order_date DATE,
 -- total int,
--- userid int);
+-- userid int REFERENCES users (id)
+-- );
+
+-- create table users(
+-- id serial primary key,
+-- firstname VARCHAR(40),
+-- lastname VARCHAR(40),
+-- email VARCHAR(300),
+-- password VARCHAR (20)
+-- )
+
