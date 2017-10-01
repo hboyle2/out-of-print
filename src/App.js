@@ -7,7 +7,8 @@ import WomensTees from './components/womens-tees/womens-tees';
 import SingleView from './components/singleitemview/SingleView';
 import WomensSweatshirts from './components/Womens-Sweatshirts/Womens-Sweatshirts';
 import Searchbar from './components/searchbar/searchbar';
-import Cart from './components/Cart/Cart'
+import Cart from './components/Cart/Cart';
+import Footer from './components/footer/footer'
 import {HashRouter,Switch, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
           </Switch>
           
         </HashRouter>
+        <Footer/>
 
       </div>
     );

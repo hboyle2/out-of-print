@@ -16,6 +16,9 @@
         align-content: center;
     
 }
+.privacy{
+    margin: 0 152px 0 152px;
+}
 
 .cart{
 	display: flex;
@@ -23,7 +26,25 @@
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-	align-content: center;
+    align-content: center;
+    margin: 0 11px 0 11px;
+}
+
+.search{
+width: 36px;
+padding: 0 0 0 10px;
+border-right: 1px solid #444444;
+}
+.account{
+width: 103.27px;
+padding: 0 0 0 10px;
+border-right: 1px solid #444444;
+text-align: center;
+}
+.bags{
+width: 87.0625px;
+padding: 0 0 0 10px;
+text-decoration: none;
 }
 
 .blueshipping{

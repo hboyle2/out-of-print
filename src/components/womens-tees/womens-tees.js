@@ -8,8 +8,10 @@ export default class WomensTees extends Component {
         super()
 
         this.state={
-            shirts:[]
+            shirts:[],
+            hover: false
         }
+        this.hover = this.hover.bind(this);
     }
 
     componentDidMount(){ 
@@ -23,6 +25,12 @@ export default class WomensTees extends Component {
 
 }
 
+hover(){
+    this.setState({
+        hover: !this.state.hover
+    })
+}
+
     render() {
         const shirtList = this.state.shirts.map((shirt)=>{
             console.log(shirt)
@@ -30,7 +38,9 @@ export default class WomensTees extends Component {
 
               <Link to = {`/collections/womens-tees/products/${shirt.slug}`} >
              
-               <div><img alt='' src={shirt.img}/></div>
+               {/* <div><img alt='' src={shirt.img}/></div> */}
+               <div onMouseOver={this.hover}>{this.state.hover ? (<img src={shirt.img}/>) : (<img src={shirt.img2}/>)}</div>
+               {/* {this.state.hover ? (<img src={shirt.img}/>) : (<img src={shirt.img2}/>)}  */}
                 <div>{shirt.name}</div>
                 <div>{shirt.gender}</div>
                 </Link>
