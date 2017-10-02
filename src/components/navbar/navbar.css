@@ -26,6 +26,9 @@
     font-weight: bold;
     color: #444444;
     text-transform: uppercase;
+    border-bottom: 1px solid black;
+    width: 1045px;
+    margin: 0 429px 0 429px;
 }
 
 .dropdowns{
@@ -39,8 +42,8 @@
    
 }
 img{
-    width: 225px;
-    height:28.8125px
+    width: 242px;
+    height:31px
 }
 
 .shop{
@@ -48,9 +51,9 @@ img{
     width: 77.1094px;
     text-align: center;
     padding: 10px 17px 8px 17px;
-    border-top: 1px solid #DDDDDD;
+    /* border-top: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD; */
 
 }
 
@@ -59,9 +62,9 @@ img{
     width: 138.453px;
     padding: 10px 17px 8px 17px;
     text-align: center;
-    border-top: 1px solid #DDDDDD;
+    /* border-top: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD; */
 }
 
 .shop-by{
@@ -69,9 +72,9 @@ img{
     width: 100.438px;
     padding: 10px 17px 8px 17px;
     text-align: center;
-    border-top: 1px solid #DDDDDD;
+    /* border-top: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD; */
 }
 
 .story{
@@ -79,8 +82,53 @@ img{
     width:121.234px;
     padding: 10px 17px 8px 17px;
     text-align: center;
-    border-top: 1px solid #DDDDDD;
+    /* border-top: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD; */
 }
 
+.dropdown{
+
+list-style-type: none;
+position: center;
+display: inline-block;
+position: absolute;
+display: block;
+background-color: #FFFFFF;
+
+z-index: 1;
+font-family: 'Open Sans', sans-serif;
+font-size: 12px;
+border: 1px solid #DDDDDD;
+padding: 20px 0px 20px 20px;
+height: 292px;
+width: 890px;
+color: #454545;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: flex-start;
+align-content: center;
+margin-left: 25%;
+}
+
+.hide-dropdown{
+
+display: none;
+
+}
+
+.dropdown li{
+    height: 25px;
+    width: 130px;
+}
+
+#title{
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+a:link, a:visited { color: black; text-decoration: none; font-weight: normal;} 
+a:active, a:hover { color: black; text-decoration: none;}

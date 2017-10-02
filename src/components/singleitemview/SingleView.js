@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './singleview.css';
 import {connect} from 'react-redux';
-import {addToShoppingCart} from '../../ducks/reducer'
+import {addToShoppingCart} from '../../ducks/reducer';
 
 class SingleView extends Component {
     constructor(){

@@ -41,8 +41,22 @@ class Footer extends Component {
                     </ul>
                 </div>
                 </div>
-            
+               
+                <div className="signup">
                 <h3>Be the first to know about title releases</h3>
+                <div>
+                    <input type="text"/>
+                    <div>Sign Up</div>
+                </div>
+                <ul className="social">
+                    <li>
+                        <a href="https://www.facebook.com/outofprintclothing"><i className="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+                </div>
+               
                
               
                 </div>
