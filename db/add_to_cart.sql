@@ -1,5 +1,6 @@
 insert into lineItems
-(product_id, qty)
+(product_id, order_id, qty)
 values
-($1,$2)
-where order_id = $3
+($1, $2, 1)
+
+

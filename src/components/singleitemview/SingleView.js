@@ -25,6 +25,8 @@ class SingleView extends Component {
             })
            
         }
+
+
         
       
     
@@ -36,11 +38,11 @@ class SingleView extends Component {
         console.log(this.state.item)
         return (
             <div className="item">
-              <img alt='' src={this.state.item.img} /> 
+              <img alt='' src={item.img} /> 
              <div className='details'>
-             <h1>{this.state.item.name}</h1> 
-             <div>{this.state.item.type}</div> 
-             <div>${this.state.item.price}</div>
+             <h1>{item.name}</h1> 
+             <div>{item.type}</div> 
+             <div>${item.price}</div>
              <button onClick={() => this.props.addToShoppingCart(item)}>Add to Cart</button>
              </div>
              

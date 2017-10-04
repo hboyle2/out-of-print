@@ -47,7 +47,7 @@ module.exports = {
 
     addToCart(req,res){
         const db = req.app.get('db');
-        const {user_id, product_id, qty} = req.body;
+        const {user_id, product_id} = req.body;
         db.get_cart([user_id]).then((cart)=>{
             if(cart[0]){
                 // console.log(cart[0])
@@ -55,19 +55,30 @@ module.exports = {
                 if(dup[0]){
                     console.log(dup[0].qty)
 
-                    db.update_quantity([dup[0].qty + 1, dup[0].product_id]).then((bob)=>{
-                       console.log(bob)
+                    db.update_quantity([dup[0].qty + 1, dup[0].product_id]).then(()=>{
+                       console.log()
                        
                     })
                     console.log("duplicate!")
                 } else {
-                    console.log('nope')
+                    db.add_to_cart([product_id, cart[0].id]).then(()=>{
+                        console.log('things')
+                    })
                 }
              })
             } else{
-                console.log('not found')
+                db.make_order([user_id]).then(()=>{
+                    db.get_cart([user_id]).then((cart)=>{
+                        db.add_to_cart([product_id, cart[0].id]).then(()=>{
+                            
+                        })
+                    })
+                    
+                    
+                })
             } 
           })
     }
+
 
 }

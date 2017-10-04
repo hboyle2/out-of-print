@@ -36,11 +36,12 @@ export default class WomensTees extends Component {
         
         return (
             <div className="shirtList">
-                <h1>women's tees</h1>
+               
                    {shirtList}
             </div>
        
         );
+      
     }
 }
 
