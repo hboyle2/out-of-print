@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const ADD_TO_SHOPPING_CART = "ADD_TO_SHOPPING_CART";
 const REMOVE_FROM_SHOPPING_CART = "REMOVE_FROM_SHOPPING_CART";
 
@@ -8,10 +10,10 @@ let initialState = {
 export default function reducer(state=initialState, action) {
     switch(action.type) {
       
-        case ADD_TO_SHOPPING_CART:
+        case ADD_TO_SHOPPING_CART + "_FULFILLED":
         console.log("shoppingcart", action.payload)
         console.log("inside reducer", state)
-            return Object.assign({}, state, {shoppingCart: [...state.shoppingCart, action.payload]});
+            return Object.assign({}, state, {shoppingCart:  action.payload});
 
         case REMOVE_FROM_SHOPPING_CART:
             let newArray = state.shoppingCart.slice();
@@ -26,7 +28,9 @@ export default function reducer(state=initialState, action) {
 export function addToShoppingCart(product) {
     return {
         type: ADD_TO_SHOPPING_CART,
-        payload: product
+        payload: axios.post('/api/cart', {product_id: product.id, user_id: 1}).then((cart)=>{
+            return cart.data
+        })
     }
 }
 
