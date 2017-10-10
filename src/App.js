@@ -6,6 +6,7 @@ import HomePage from './components/homePage/homePage';
 import WomensTees from './components/womens-tees/womens-tees';
 import SingleView from './components/singleitemview/SingleView';
 import WomensSweatshirts from './components/Womens-Sweatshirts/Womens-Sweatshirts';
+import MensTees from './components/mens-tees'
 import Searchbar from './components/searchbar/searchbar';
 import Cart from './components/Cart/Cart';
 import Footer from './components/footer/footer'
@@ -24,6 +25,8 @@ class App extends Component {
           <Route path="/collections/womens-tees/products/:slug" component={SingleView}/>
           <Route path="/collections/womens-sweatshirts" component={WomensSweatshirts}/>
           <Route path="/collections/womens-tees" component={WomensTees}/>
+          <Route path="/collections/mens-tees" component={MensTees}/>
+
           <Route path="/Cart" component={Cart}/>
           
           </Switch>

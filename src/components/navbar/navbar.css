@@ -8,9 +8,7 @@
 } */
 
 
-.bob{
-    height: 30px;
-}
+
 
 .navbar{
 	display: flex;
@@ -27,8 +25,8 @@
     color: #444444;
     text-transform: uppercase;
     border-bottom: 1px solid black;
-    width: 1045px;
-    margin: 0 429px 0 429px;
+   
+
 }
 
 .dropdowns{
@@ -41,9 +39,9 @@
     
    
 }
-img{
-    width: 242px;
-    height:31px
+.bob img{
+    width: 90px;
+    height:21px
 }
 
 .shop{

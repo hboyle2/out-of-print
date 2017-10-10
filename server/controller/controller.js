@@ -16,6 +16,14 @@ module.exports = {
        }).catch((err) => {console.log(err);});
          
        },
+       getMensTees(req,res) {
+        const db = req.app.get('db');
+   
+        db.mens_tshirts([])
+        .then((items)=> { res.send(items);
+       }).catch((err) => {console.log(err);});
+         
+       },
 
      getItem(req,res) {
         const db = req.app.get('db');

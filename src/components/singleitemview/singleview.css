@@ -1,13 +1,14 @@
-/* .details{
+.details{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: flex-end;
-	align-content: space-between;
+	
+	
+    align-content: space-between;
+    width: 20%;
 }
 
-.item
+.shirt
     {
         display: flex;
         flex-direction: row;
@@ -26,7 +27,15 @@ h1{
     font-size: 35px;
 }
 
-.item img{
-    width: 60%;
-    height: 60%;
-} */
+.shirt img{
+    width: 50%;
+    height: 50%;
+    margin: 0 11px 0 11px;
+} 
+
+.shirt p{
+    max-width: 100%;
+    background-color: #103746;
+    color: white;
+    padding: 5px 10px 5px 10px;
+}

@@ -45,7 +45,7 @@ export default class Navbar extends Component {
                 </ul>
                 <ul>
                     <li id='title'>Men/unisex</li>
-                    <li>T-Shirts</li>
+                    <Link to ="/collections/mens-tees"><li>T-Shirts</li></Link>
                     <li>Long-Sleeve</li>
                     <li>Sweatshirts</li>
                     <li>Socks</li>

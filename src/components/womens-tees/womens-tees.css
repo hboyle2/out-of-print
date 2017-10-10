@@ -24,10 +24,10 @@ body{
 	color: #000;
 	text-align: center;
 	text-decoration: none;
-	
-
+	margin-right: 1.04%;
+	margin-left: 1.04%
 }
-    img{ 
+    .item img{ 
         width: 323.5px;
 		height: 246px;
 	

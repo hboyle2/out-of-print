@@ -17,7 +17,7 @@ class Searchbar extends Component {
                <div className='cart'>
                    <div className="search">
                        <li>Q</li></div>
-                   <div className="account">My Account</div>
+                   <div className="account"><a href = {process.env.REACT_APP_LOGIN } >My Account</a> </div>
                  <Link to ='/cart'><div className="bags">My Bags</div></Link>  
                 </div> 
             </div>

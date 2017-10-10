@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { removeFromShoppingCart } from '../../ducks/reducer';
 import { connect } from 'react-redux';
+import './cart.css'
 
 class Cart extends Component {
     
@@ -8,12 +9,17 @@ class Cart extends Component {
         let shoppingCartDisplay = this.props.shoppingCart.map((item, index) => {
             return (
                 <div  key={index}>
-                    <img src={item.img} alt="" />
                     <div>
-                        <h2>{item.name}</h2>
+                    <img  className="cart-shirt" src={item.img} alt="" />
+                    <h2>{item.name}</h2>
+                    </div>
+                  
+                    <div>
+                        
                         <h2>{"$" + item.price + ".00"}</h2>
                         <div >
-                            <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(index)}>Remove From Shopping Cart</button>
+                            <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(index)}>X</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -21,9 +27,21 @@ class Cart extends Component {
         })
         return (
             <div className="shopping-cart-container">
-                {shoppingCartDisplay[0] ? 
-                shoppingCartDisplay
-                : <div className="go-buy-something"><h1>Your shopping cart is empty!  Go buy something!</h1></div>}
+                <ul className='wrapper'>
+                    <li className='box1'>box1</li>
+                    <li className='box2'>box2
+                    {shoppingCartDisplay[0] ? 
+                shoppingCartDisplay 
+                : <div className="go-buy-something"><h1>empty cart</h1></div>}  
+                   
+                    </li>
+                    <li className='box3'>box3</li>
+                    
+                    
+                </ul>
+                {/* {shoppingCartDisplay[0] ? 
+                shoppingCartDisplay 
+                : <div className="go-buy-something"><h1>empty cart</h1></div>}   */}
             </div>
         )
     }
