@@ -8,34 +8,46 @@ class Cart extends Component {
     render() {
         let shoppingCartDisplay = this.props.shoppingCart.map((item, index) => {
             return (
-                <div  key={index}>
-                    <div>
-                    <img  className="cart-shirt" src={item.img} alt="" />
-                    <h2>{item.name}</h2>
+                <div  key={index} className="blah">
+                    <div className="one">
+                    
+                      <img  className="cart-shirt" src={item.img} alt="" />
+                      <h2> {item.name}</h2>
                     </div>
-                  
-                    <div>
-                        
-                        <h2>{"$" + item.price + ".00"}</h2>
-                        <div >
-                            <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(index)}>X</button>
-                            
-                        </div>
-                    </div>
+                <div className="two">
+                 <h2>{"$" + item.price + ".00"}</h2>
+                </div>
+                <div className="three">update</div>
+                <div className="four">
+                 <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(index)}>X</button>
+                </div>
+                <div className="five">total</div>
                 </div>
             )
         })
+        console.log("shopping",this.props.shoppingCart)
+        
         return (
             <div className="shopping-cart-container">
+              
+               
                 <ul className='wrapper'>
-                    <li className='box1'>box1</li>
-                    <li className='box2'>box2
+                    <li className='box1'>My Bag</li>
+                    <li className='box2'>
                     {shoppingCartDisplay[0] ? 
                 shoppingCartDisplay 
                 : <div className="go-buy-something"><h1>empty cart</h1></div>}  
-                   
+                
                     </li>
-                    <li className='box3'>box3</li>
+                    <li className='box3'>
+                        {
+                           
+                            this.props.shoppingCart.reduce((sum, item)=>{
+                                console.log(item)
+                               return sum + (parseInt(item.price) * item.qty)
+                            },0)
+                        }
+                    </li>
                     
                     
                 </ul>
