@@ -85,6 +85,7 @@ app.get('/api/mens/tshirts', ctrl.getMensTees)
 app.get(`/api/item/:slug`, ctrl.getItem)
 //app.post(`/api/order`, ctrl.getOrder)
 app.post('/api/cart', ctrl.addToCart)
+app.delete('/api/cart/:id/:userid', ctrl.deleteItems)
 
 
 

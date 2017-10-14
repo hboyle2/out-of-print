@@ -15,28 +15,34 @@ export default function reducer(state=initialState, action) {
         console.log("inside reducer", state)
             return Object.assign({}, state, {shoppingCart:  action.payload});
 
-        case REMOVE_FROM_SHOPPING_CART:
-            let newArray = state.shoppingCart.slice();
-            newArray.splice(action.payload, 1);
-            return Object.assign({}, state, {shoppingCart: newArray});
+        case REMOVE_FROM_SHOPPING_CART + "_FULFILLED":
+           
+            return Object.assign({}, state, {shoppingCart: action.payload});
             
         default:
             return state;
     }
 }
 
-export function addToShoppingCart(product) {
+export function addToShoppingCart(goop) {
+    console.log("things",goop)
     return {
         type: ADD_TO_SHOPPING_CART,
-        payload: axios.post('/api/cart', {product_id: product.id, user_id: 1}).then((cart)=>{
+        payload: axios.post('/api/cart', {product_id: goop.id, user_id: 1}).then((cart)=>{
             return cart.data
         })
     }
 }
 
-export function removeFromShoppingCart(productIndex) {
+export function removeFromShoppingCart(product,userid) {
+    console.log('user', userid)
     return {
         type: REMOVE_FROM_SHOPPING_CART,
-        payload: productIndex
+        payload: axios.delete(`/api/cart/${product}/1`).then((cart)=>{
+            return cart.data
+        })
+        
+        // productIndex
     }
+    
 }

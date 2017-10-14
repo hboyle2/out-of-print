@@ -19,7 +19,7 @@ class Cart extends Component {
                 </div>
                 <div className="three">update</div>
                 <div className="four">
-                 <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(index)}>X</button>
+                 <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(item.id)}>X</button>
                 </div>
                 <div className="five">total</div>
                 </div>
@@ -40,20 +40,21 @@ class Cart extends Component {
                 
                     </li>
                     <li className='box3'>
+                        <div>subtotal</div>
                         {
                            
                             this.props.shoppingCart.reduce((sum, item)=>{
-                                console.log(item)
-                               return sum + (parseInt(item.price) * item.qty)
+                                {/* console.log(item) */}
+                               return sum + (parseInt(item.price, 10) * item.qty)
                             },0)
                         }
+                        <div>CHECKOUT</div>
                     </li>
                     
                     
+                    
                 </ul>
-                {/* {shoppingCartDisplay[0] ? 
-                shoppingCartDisplay 
-                : <div className="go-buy-something"><h1>empty cart</h1></div>}   */}
+               
             </div>
         )
     }
