@@ -6,9 +6,9 @@ class Footer extends Component {
             <div className="footer">
                 <div className="spread">
                 <div className="f2">
-                <div className="Help">
+                <div id="haf">
                     <h4>Help</h4>
-                    <ul id="haf">
+                    <ul >
                         <li>FAQ</li>
                         <li>Contact Us</li>
                         <li>Shipping</li>
@@ -44,16 +44,21 @@ class Footer extends Component {
                
                 <div className="signup">
                 <h3>Be the first to know about title releases</h3>
-                <div>
-                    <input type="text"/>
-                    <div>Sign Up</div>
-                </div>
-                <ul className="social">
+                <div >
+                    <input className="input" type="email" placeholder="Enter email here"/>
+                    <input type="submit" className="submit" value="sign up"/>
+                    <ul className="social">
                     <li>
-                        <a href="https://www.facebook.com/outofprintclothing"><i className="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="https://www.facebook.com/outofprintclothing"><i className="fa fa-facebook fa-2x" aria-hidden="true"></i>
                         </a>
                     </li>
+                    <li><i className="fa fa-twitter fa-2x "aria-hidden="true"></i></li>
+                    <li><i className="fa fa-tumblr fa-2x" aria-hidden="true"></i></li>
+                    <li><i className="fa fa-pinterest fa-2x" aria-hidden="true"></i></li>
+                    <li><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
                 </ul>
+                </div>
+              
                 
                 </div>
                

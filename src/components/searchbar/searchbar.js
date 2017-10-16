@@ -16,8 +16,10 @@ class Searchbar extends Component {
                <div className="privacy">Privacy Policy updated. By continuing to use this site, you agree to the terms.</div>
                <div className='cart'>
                    <div className="search">
-                       <li>Q</li></div>
+                       <li><i className="fa fa-search" aria-hidden="true"></i></li></div>
+                       <hr/>
                    <div className="account"><a href = {process.env.REACT_APP_LOGIN } >My Account</a> </div>
+                 <hr/>
                  <Link to ='/cart'><div className="bags">My Bags</div></Link>  
                 </div> 
             </div>

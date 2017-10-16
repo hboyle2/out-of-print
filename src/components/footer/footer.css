@@ -1,11 +1,113 @@
+.footer{
+    margin: 0 152px;
+}
 li{
     margin:0;
+    padding: 0;
 }
 ul{
-    list-style-type: none;
+    list-style-type: none;   
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    margin: 0;
+    padding-bottom:10px;
+    text-transform: uppercase;
+	font-family: 'Roboto Slab', serif;
+    color: #103746;
+    font-size: 16px;
+}
+
+.f2{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: stretch;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #103746;
+    /* line-height: 19.35px; */
+    padding-left: 40px;
+}
+
+#haf{
+    padding-right: 70px;
+}
+
+.spread{
     
-   
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-start;
+       
+        padding: 30px 0 30px 0;
+        
     
+}
+.signup{
+    width: 40%;
+}
+.signup h3{
+    font-size: 24px;
+    line-height: 1.1;
+    
+	font-family: 'Roboto Slab', serif;
+    color: #103746;
+    width: 100%;
+ 
+    line-height:26.4px;
+
+}
+
+
+.social {
+    display: flex;
+    flex-direction: row;
+  
+}
+.signup input{
+    border: 1px solid #B7B7B7;
+    margin: 0 0 5px 0;
+    padding: 9px 9px 8px  ;
+    max-width:100%; 
+    width: 130px;
+    
+}
+.submit{
+    background-color: #0f6db6;
+    font-family: "Roboto Slab",serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.footer{
+    background: #103746;
+    content: '';
+    margin: 0 152px;
+    height: 4px;
+    
+}
+i{
+    color: #888888;
+    padding:10px 10px;
+    font-size: 2em;
+}
+/* .sineUp{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
 }
 .f2{
 	display: flex;
@@ -50,6 +152,13 @@ h4{
     height: 4px;
     width: 100%;
 }
+.apparel{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	
+}
 
 h3{
     font-size: 2em;
@@ -58,20 +167,12 @@ h3{
 	font-family: 'Roboto Slab', serif;
     color: #103746;
     width: 100%;
-    margin: 0 0 30px 0;
+ 
     line-height:26.4px;
 
 }
 
-.signup{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-    align-content: flex-start;
-   
-}
+
 
 .signup input{
     border: 1px solid #B7B7B7;
@@ -81,20 +182,25 @@ h3{
     width: 130px;
     
 }
-
-.signup button{
-    background-color: #0F6Db6;
-    color: white;
-    margin: 0 0 23px 0;
-    padding: 8px 0 8px 0;
-    max-width: 100%;
-    display: inline-block;
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: normal;
+.submit{
+    background-color: #0f6db6;
     font-family: "Roboto Slab",serif;
-    text-decoration: none;
-    width:90px;
-    height: 36px;
+    color: #ffffff;
+    text-transform: uppercase
 }
 
+
+
+.social {
+        display: flex;
+        flex-direction: row;
+      
+    }
+
+.social li{
+    padding: 0;
+}
+i{
+    color: #888888
+} */
+ 

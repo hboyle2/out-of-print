@@ -91,6 +91,12 @@ form{
  
 }
 
+.bob img{
+    width: 100%;
+    height: 500px;
+    margin: 0;
+}
+
 /* @media (max-width:1000px) {
     .promo-images img {
         

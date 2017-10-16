@@ -36,13 +36,13 @@ width: 36px;
 }
 .search li{
     padding: 0 0 0 10px;
-    border-right: 1px solid #444444;
+    /* border-right: 1px solid #444444; */
     list-style-type: none;
 }
 .account{
 width: 103.27px;
 padding: 0 0 0 10px;
-border-right: 1px solid #444444;
+/* border-right: 1px solid #444444; */
 text-align: center;
 }
 .bags{
@@ -66,4 +66,9 @@ text-decoration: none;
     letter-spacing: 1.125px;
     line-height: 19.5px;
     padding: 7px 0 7px 0;
+}
+
+hr{
+   
+    height: 20px;
 }

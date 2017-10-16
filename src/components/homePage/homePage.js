@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
 import './homepage.css'
+import { Carousel } from 'react-responsive-carousel'
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 export default class HomePage extends Component {
     render() {
-        // var slideIndex = 0;
-        // carousel();
-        
-        // function carousel() {
-        //     var i;
-        //     var x = document.getElementsByClassName("mySlides");
-        //     for (i = 0; i < x.length; i++) {
-        //       x[i].style.display = "none"; 
-        //     }
-        //     slideIndex++;
-        //     if (slideIndex > x.length) {slideIndex = 1} 
-        //     x[slideIndex-1].style.display = "block"; 
-        //     setTimeout(carousel, 2000); // Change image every 2 seconds
-        // }
+     
         return (
             <div className="dammit">
+                 <div className="bob">
+                <Carousel autoPlay={true} interval={3000}  showThumbs={false}>
+                <div className="bob">
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide1.jpg?5736034691839156452" />
+                  
+                </div>
+                <div className="bob">
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide2.jpg?5736034691839156452" />
+                  
+                </div>
+                <div className="bob">
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide3.jpg?5736034691839156452" />
+                
+                </div>
+                </Carousel>
+            </div>
                 {/* <div id="index">
                <div id="promo-banner">
                    <h3>Sign up for updates and future promotions</h3>
@@ -29,6 +34,8 @@ export default class HomePage extends Component {
                    </div>
                </div>
             </div> */}
+
+       
            <div className="promo-images">
                     <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/leftpromo.jpg?635266383391944640" alt=""/>
                     <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/midpromo.jpg?635266383391944640" alt=""/>

@@ -35,7 +35,7 @@ export function addToShoppingCart(goop) {
 }
 
 export function removeFromShoppingCart(product,userid) {
-    console.log('user', userid)
+   
     return {
         type: REMOVE_FROM_SHOPPING_CART,
         payload: axios.delete(`/api/cart/${product}/1`).then((cart)=>{
