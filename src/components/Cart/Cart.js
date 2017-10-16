@@ -17,11 +17,11 @@ class Cart extends Component {
                 <div className="two">
                  <h2>{"$" + item.price + ".00"}</h2>
                 </div>
-                <div className="three">update</div>
+                <div className="three"><input placeholder={item.qty}/>update </div>
                 <div className="four">
                  <button className="shopping-cart-button" onClick={() => this.props.removeFromShoppingCart(item.id)}>X</button>
                 </div>
-                <div className="five">total</div>
+                <div className="five">{ "$" + item.price * item.qty + ".00"}</div>
                 </div>
             )
         })

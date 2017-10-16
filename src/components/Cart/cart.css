@@ -42,6 +42,7 @@ justify-content: flex-start;
 align-items: flex-start;
 align-content: flex-start;
 width: 100%;
+margin-left: 152px;
 }
 .blah{
 	display: flex;
@@ -59,11 +60,11 @@ width: 100%;
 }
 
 .box3 {
-background-color: #4D4D4D;
+grid-column: 3/4;
 }
 
 .one{
-	width: 60%;
+	width: 60%; 
 	height: 201px;
 	display: flex;
 	flex-direction: row;
@@ -77,12 +78,13 @@ background-color: #4D4D4D;
 	color: #000;
 	text-align: center;
 	border: 1px solid #b7b7b7;
+	padding:20px 10px;
 }
 
 .two{
 	border: 1px solid #b7b7b7;
 	height: 201px;
-	width: 10%;
+	width: 10%; 
 	text-align: center;	
 	font-size: 14px;
 	font-weight: normal;
@@ -93,6 +95,7 @@ background-color: #4D4D4D;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	padding:20px 10px;
 }
 
 .three{
@@ -102,14 +105,23 @@ background-color: #4D4D4D;
 	font-size: 14px;
 	font-weight: normal;
 	font-family: 'Roboto Slab', serif;
-	width: 10%;
+	width: 10%; 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	padding:20px 10px;
+	
 }
+
+.three input{
+	width: 20px; 
+	text-align: center;
+	padding:20px 10px;
+}
+
 
 .four{
 	border: 1px solid #b7b7b7;
@@ -125,6 +137,7 @@ background-color: #4D4D4D;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	padding:20px 10px;
 }
 
 .five{
@@ -141,4 +154,5 @@ background-color: #4D4D4D;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	padding:20px 10px;
 }
