@@ -12,14 +12,16 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(passport.initialize());
-app.use(passport.session());
+
 
 app.use(session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 passport.use( new Auth0Strategy({
     domain: process.env.AUTH_DOMAIN,
@@ -28,24 +30,29 @@ passport.use( new Auth0Strategy({
     callbackURL: process.env.AUTH_CALLBACK
 }, function(acessToken, refreshToken, extraParams, profile, done){
     const db = app.get('db');
-    console.log(profile.identities[0].user_id)
+    // console.log(profile.identities[0].user_id)
     db.get_user([profile.identities[0].user_id]).then( user => {
-        console.log('user', user)
+        // console.log('user', user)
         if(user[0]){
             done(null, user[0].id)
         } else {
-            db.create_user([profile.displayName, profile.emails[0].value, profile.identities[0].user_id]).then( user => {
+            db.create_user([ profile.emails[0].value, profile.identities[0].user_id]).then( user => {
                 done(null, user[0].id)
+                // console.log("display", profile)
             })
         }
     })
 }))
-
+// app.use("*", (req,res,next)=>{
+//     next()
+// })
 passport.serializeUser(function(userId, done){
+    // console.log("serialize userId", userId)
     done(null, userId);
 })
 
-passport.deserializeUser( function(userId, done){
+passport.deserializeUser(function(userId, done){
+    // console.log('deserialize userId', userId)
     app.get('db').current_user([userId]).then( user => {
         done(null, user[0]);
     })
@@ -85,7 +92,11 @@ app.get('/api/mens/tshirts', ctrl.getMensTees)
 app.get(`/api/item/:slug`, ctrl.getItem)
 //app.post(`/api/order`, ctrl.getOrder)
 app.post('/api/cart', ctrl.addToCart)
-app.delete('/api/cart/:id/:userid', ctrl.deleteItems)
+app.delete('/api/cart/:id/', ctrl.deleteItems)
+app.get('/api/test', (req,res)=>{
+    console.log(req.user)
+    res.end()
+})
 
 
 

@@ -85,7 +85,7 @@ form{
 }
 
 .promo-images img{
-    margin: 0 15px 15px 0;
+    margin: 50px 15px 15px 0;
     height: auto;
     width: 30%;
  
@@ -94,7 +94,7 @@ form{
 .bob img{
     width: 100vw;
     height: 100vh;
-    margin: 0;
+   
 }
 
 /* @media (max-width:1000px) {

@@ -9,32 +9,45 @@
 
 .cart-shirt{
     height: 160px;
-    width: 122px;
+	width: 122px;
+	padding-right: 20px;
 }
 
 .wrapper {
 	display: grid;
-	grid-template-columns: repeat( 3, 1fr);
+	grid-template-columns: repeat( 6, 1fr);
 	grid-gap: 1em;
 	align-items: stretch;
 	justify-content: stretch;
 	width: 100%;
 }
-.box1 {
-grid-column: 1/4;
+.center{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	padding-left: 152px;
+	
+}
 
-text-align: center;
+.box1 {
+grid-column: 1/6;
 font-family: 'Roboto Slab', serif;
 color: #000;
 text-align: center;
 font-weight: bold;
 font-size: 30px;
 
+
+
+/* margin: 0 152px; */
 }
 
 .box2 {
 
-grid-column: 1/3;
+grid-column: 1/5;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
@@ -42,8 +55,23 @@ justify-content: flex-start;
 align-items: flex-start;
 align-content: flex-start;
 width: 100%;
-margin-left: 152px;
+border-top: 1px solid #b7b7b7;
+
+
+/* margin-left: 152px; */
+
+
 }
+	.box3 {
+	grid-column: 5/6;
+	/* margin-right: 152px; */
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	/* background: teal */
+	}
 .blah{
 	display: flex;
 	flex-direction: row;
@@ -59,9 +87,6 @@ margin-left: 152px;
 	font-size: 13px;
 }
 
-.box3 {
-grid-column: 3/4;
-}
 
 .one{
 	width: 60%; 
@@ -69,7 +94,7 @@ grid-column: 3/4;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
 	font-size: 14px;
@@ -77,12 +102,17 @@ grid-column: 3/4;
 	font-family: 'Roboto Slab', serif;
 	color: #000;
 	text-align: center;
-	border: 1px solid #b7b7b7;
-	padding:20px 10px;
+	border-right: 1px solid #b7b7b7;
+	border-left: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
+	padding:10px 10px;
+	
 }
 
+
 .two{
-	border: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
 	height: 201px;
 	width: 10%; 
 	text-align: center;	
@@ -95,11 +125,15 @@ grid-column: 3/4;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	padding:20px 10px;
+	padding:10px 10px;
+	
+	
 }
 
+
 .three{
-	border: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
 	height: 201px;
 	text-align: center;	
 	font-size: 14px;
@@ -112,19 +146,22 @@ grid-column: 3/4;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	padding:20px 10px;
+	padding:10px 10px;
+	margin-right:-1px; margin-bottom:-1px;
 	
 }
 
 .three input{
 	width: 20px; 
 	text-align: center;
-	padding:20px 10px;
+	padding:10px 10px;
+
 }
 
 
 .four{
-	border: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
 	height: 201px;
 	text-align: center;	
 	font-size: 14px;
@@ -137,16 +174,20 @@ grid-column: 3/4;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	padding:20px 10px;
+	padding:10px 10px;
+	border-collapse: collapse;
+	
 }
 
 .five{
-	border: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
 	height: 201px;
 	text-align: center;	
 	font-size: 14px;
 	font-weight: normal;
 	font-family: 'Roboto Slab', serif;
+	
 	width: 10%;
 	display: flex;
 	flex-direction: row;
@@ -154,5 +195,33 @@ grid-column: 3/4;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	padding:20px 10px;
+	padding:10px 10px;
+	margin-right: 60px;
+	border-collapse: collapse;
+}
+
+.subtotal{
+	text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+}
+
+.total{
+	text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+	font-size: 35px;
+	margin-bottom: 10px;
+}
+
+.checkout{
+	width:  100%;
+	padding: 8px 0px;
+	background-color: #103746;
+	color: white;
+	display: inline-block;
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	align-items: flex-start;
 }

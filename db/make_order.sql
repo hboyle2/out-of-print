@@ -1,5 +1,5 @@
 insert into orders
-(userid)
+(userid, fufilled)
 VALUES
-($1);
+($1, 'false');
 

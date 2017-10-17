@@ -24,21 +24,21 @@ export default function reducer(state=initialState, action) {
     }
 }
 
-export function addToShoppingCart(goop) {
-    console.log("things",goop)
+export function addToShoppingCart(product) {
+    // console.log("things",goop)
     return {
         type: ADD_TO_SHOPPING_CART,
-        payload: axios.post('/api/cart', {product_id: goop.id, user_id: 1}).then((cart)=>{
+        payload: axios.post('/api/cart', {product_id: product.id}).then((cart)=>{
             return cart.data
         })
     }
 }
 
-export function removeFromShoppingCart(product,userid) {
+export function removeFromShoppingCart(product) {
    
     return {
         type: REMOVE_FROM_SHOPPING_CART,
-        payload: axios.delete(`/api/cart/${product}/1`).then((cart)=>{
+        payload: axios.delete(`/api/cart/${product}`).then((cart)=>{
             return cart.data
         })
         

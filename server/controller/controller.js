@@ -40,23 +40,27 @@ module.exports = {
        }).catch((err) => {console.log(err);});
     },
 
-    checkuser(){
-        const db = req.app.get('db');
-        db.get_cart([1]).then((cart)=>{
-          if(cart[0]){
-            console.log('found cart!')
-          } else{
-              console.log('not found')
-          } 
+    // checkuser(){
+        
+    //     // console.log( "check", req.user)        
+    //     const db = req.app.get('db');
+    //     db.get_cart([req.user.id]).then((cart)=>{
+           
+    //       if(cart[0]){
+    //         console.log('found cart!')
+    //       } else{
+    //           console.log('not found')
+    //       } 
           
-        })
-    },
+    //     })
+    // },
 
 
     addToCart(req,res){
         const db = req.app.get('db');
-        const {user_id, product_id} = req.body;
-        db.get_cart([user_id]).then((cart)=>{
+        const { product_id} = req.body;
+        console.log("adfskj;fask", req.user)
+        db.get_cart([req.user.id]).then((cart)=>{
             if(cart[0]){
                 // console.log(cart[0])
              db.check_duplicates([product_id, cart[0].id]).then((dup)=>{
@@ -66,27 +70,46 @@ module.exports = {
                     db.update_quantity([dup[0].qty + 1, dup[0].product_id]).then(()=>{
                      db.return_cart([cart[0].id]).then((cartItems)=>{
                          res.send(cartItems)
-                     })
+                     }).catch((err)=>{
+                        console.log(err)
+                    })
                        
+                    }).catch((err)=>{
+                        console.log(err)
                     })
                     console.log("duplicate!")
                 } else {
                     db.add_to_cart([product_id, cart[0].id]).then(()=>{
                         db.return_cart([cart[0].id]).then((cartItems)=>{
                             res.send(cartItems)
+                        }).catch((err)=>{
+                            console.log(err)
                         })
+                    }).catch((err)=>{
+                        console.log(err)
                     })
                 }
+             }).catch((err)=>{
+                 console.log(err)
              })
             } else{
-                db.make_order([user_id]).then(()=>{
-                    db.get_cart([user_id]).then((cart)=>{
+                db.make_order([req.user.id]).then(()=>{
+                    db.get_cart([req.user.id]).then((cart)=>{
+                        console.log(cart)
                         db.add_to_cart([product_id, cart[0].id]).then(()=>{
                             db.return_cart([cart[0].id]).then((cartItems)=>{
                                 res.send(cartItems)
+                            }).catch((err)=>{
+                                console.log(err)
                             })
+                        }).catch((err)=>{
+                            console.log(err)
                         })
+                    }).catch((err)=>{
+                        console.log(err)
                     })
+                }).catch((err)=>{
+                    console.log(err)
                 })
             } 
         })
@@ -94,7 +117,7 @@ module.exports = {
 
    deleteItems(req,res){
     const db = req.app.get('db');
-    db.get_cart([req.params.userid]).then((order)=>{
+    db.get_cart([req.user.id]).then((order)=>{
         db.delete_item([req.params.id, order[0].id]).then(()=>{
             db.return_cart([order[0].id]).then((cartItems)=>{
                 res.send(cartItems)

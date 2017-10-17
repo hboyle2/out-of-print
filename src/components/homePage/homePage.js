@@ -10,15 +10,15 @@ export default class HomePage extends Component {
                  <div className="bob">
                 <Carousel autoPlay={true} interval={3000}  showThumbs={false}>
                 <div className="bob">
-                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide1.jpg?5736034691839156452" />
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide1.jpg?5736034691839156452" alt="car1" />
                   
                 </div>
                 <div className="bob">
-                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide2.jpg?5736034691839156452" />
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide2.jpg?5736034691839156452" alt="car2" />
                   
                 </div>
                 <div className="bob">
-                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide3.jpg?5736034691839156452" />
+                    <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide3.jpg?5736034691839156452" alt="car3" />
                 
                 </div>
                 </Carousel>
