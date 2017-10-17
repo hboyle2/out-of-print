@@ -8,7 +8,7 @@ export default class HomePage extends Component {
         return (
             <div className="dammit">
                  <div className="bob">
-                <Carousel autoPlay={true} interval={3000}  showThumbs={false}>
+                <Carousel autoPlay={true} interval={9000} infiniteLoop={true} showThumbs={false}>
                 <div className="bob">
                     <img src="https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/slide1.jpg?5736034691839156452" alt="car1" />
                   

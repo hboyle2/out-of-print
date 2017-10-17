@@ -21,6 +21,7 @@ class Searchbar extends Component {
                        <li><i className="fa fa-search" aria-hidden="true"></i></li></div>
                        <hr/>
                    <div className="account"><a href = {process.env.REACT_APP_LOGIN } >My Account</a> </div>
+                   
                  <hr/>
                  <Link to ='/cart'><div className="bags">My Bags <div>
                 

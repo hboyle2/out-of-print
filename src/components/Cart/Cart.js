@@ -60,6 +60,7 @@ class Cart extends Component {
 
                         <div className="subtotal">subtotal</div>
                         <div className="total"> $
+                            
 
                         {
                            

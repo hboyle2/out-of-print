@@ -62,9 +62,14 @@ passport.deserializeUser(function(userId, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/',
+    successRedirect: 'http://localhost:3000/#/account',
     failureRedirect: '/auth'
 }))
+
+app.get('/auth/logout', (req,res)=>{
+    req.logOut();
+    res.redirect(302, 'https://haleyb.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost%3A3000%2F&client_id=023s1_krVmPpqHvdeTmCi4N90VteqyS3')
+})
 
 app.get('/auth/user', (req,res,next) => {
     // console.log('session', req.session);
@@ -77,10 +82,10 @@ app.get('/auth/user', (req,res,next) => {
    
 })
 
-app.get('/auth/logout', (req,res, next) => {
-    req.session.destroy();
-    res.redirect(302, ''  )
-})
+// app.get('/auth/logout', (req,res, next) => {
+//     req.session.destroy();
+//     res.redirect(302, ''  )
+// })
 
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);

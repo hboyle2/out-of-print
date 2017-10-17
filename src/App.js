@@ -9,7 +9,8 @@ import WomensSweatshirts from './components/Womens-Sweatshirts/Womens-Sweatshirt
 import MensTees from './components/mens-tees'
 import Searchbar from './components/searchbar/searchbar';
 import Cart from './components/Cart/Cart';
-import Footer from './components/footer/footer'
+import Footer from './components/footer/footer';
+import Account from './components/Account'
 import {HashRouter,Switch, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -26,7 +27,7 @@ class App extends Component {
           <Route path="/collections/womens-sweatshirts" component={WomensSweatshirts}/>
           <Route path="/collections/womens-tees" component={WomensTees}/>
           <Route path="/collections/mens-tees" component={MensTees}/>
-
+          <Route path= '/account' component={Account}/>
           <Route path="/Cart" component={Cart}/>
           
           </Switch>
