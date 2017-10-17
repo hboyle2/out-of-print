@@ -22,6 +22,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static('build'))
 
 passport.use( new Auth0Strategy({
     domain: process.env.AUTH_DOMAIN,
@@ -62,13 +63,13 @@ passport.deserializeUser(function(userId, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/account',
+    successRedirect: 'http://localhost:4646/#/account',
     failureRedirect: '/auth'
 }))
 
 app.get('/auth/logout', (req,res)=>{
     req.logOut();
-    res.redirect(302, 'https://haleyb.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost%3A3000%2F&client_id=023s1_krVmPpqHvdeTmCi4N90VteqyS3')
+    res.redirect(302, 'https://haleyb.auth0.com/v2/logout?returnTo=http%3A%2F%2Flocalhost%3A4646%2F&client_id=023s1_krVmPpqHvdeTmCi4N90VteqyS3')
 })
 
 app.get('/auth/user', (req,res,next) => {
