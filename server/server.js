@@ -63,7 +63,7 @@ passport.deserializeUser(function(userId, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:4646/#/account',
+    successRedirect: 'http://wwww.outofprintclone.com/#/account',
     failureRedirect: '/auth'
 }))
 
