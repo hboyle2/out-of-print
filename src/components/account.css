@@ -12,4 +12,9 @@
     align-content: space-around;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
+    margin: 100px 152px;
+}
+
+.logout a{
+    color:white;
 }

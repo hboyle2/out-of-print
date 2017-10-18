@@ -71,7 +71,7 @@ app.get('/auth/logout', (req,res)=>{
     console.log(req.user)
     req.logOut();
     console.log(req.user)
-    res.redirect(302, 'http://www.outofprintclone.com')
+    res.redirect(302, 'http://www.outofprintclone.info')
 })
 
 app.get('/auth/user', (req,res,next) => {
