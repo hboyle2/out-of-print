@@ -55,7 +55,7 @@ justify-content: flex-start;
 align-items: flex-start;
 align-content: flex-start;
 width: 100%;
-border-top: 1px solid #b7b7b7;
+
 
 
 /* margin-left: 152px; */
@@ -108,6 +108,9 @@ border-top: 1px solid #b7b7b7;
 	padding:10px 10px;
 	
 }
+.one:first-child{
+	border-top: 1px solid #b7b7b7;
+}
 
 
 .two{
@@ -125,9 +128,11 @@ border-top: 1px solid #b7b7b7;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	padding:10px 10px;
-	
-	
+	padding:10px 10px;	
+}
+
+.two:first-child{
+	border-top: 1px solid #b7b7b7;
 }
 
 
@@ -149,6 +154,10 @@ border-top: 1px solid #b7b7b7;
 	padding:10px 10px;
 	margin-right:-1px; margin-bottom:-1px;
 	
+}
+
+.three:first-child{
+	border-top: 1px solid #b7b7b7;
 }
 
 .three input{
@@ -178,6 +187,9 @@ border-top: 1px solid #b7b7b7;
 	border-collapse: collapse;
 	
 }
+.four:first-child{
+	border-top: 1px solid #b7b7b7;
+}
 
 .five{
 	border-right: 1px solid #b7b7b7;
@@ -198,6 +210,10 @@ border-top: 1px solid #b7b7b7;
 	padding:10px 10px;
 	margin-right: 60px;
 	border-collapse: collapse;
+}
+
+.five:first-child{
+	border-top: 1px solid #b7b7b7;
 }
 
 .subtotal{
