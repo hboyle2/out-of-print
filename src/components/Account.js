@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './account.css'
 
 class Account extends Component {
     render() {

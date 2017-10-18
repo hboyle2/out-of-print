@@ -71,7 +71,7 @@ app.get('/auth/logout', (req,res)=>{
     console.log(req.user)
     req.logOut();
     console.log(req.user)
-    res.redirect(302, 'https://haleyb.auth0.com/v2/logout?returnTo=http%3A%2F%2Fwww.outofprintclone.info%3A4646%2F&client_id=023s1_krVmPpqHvdeTmCi4N90VteqyS3')
+    res.redirect(302, 'http://www.outofprintclone.com')
 })
 
 app.get('/auth/user', (req,res,next) => {
