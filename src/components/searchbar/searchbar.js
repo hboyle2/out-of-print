@@ -25,11 +25,11 @@ class Searchbar extends Component {
                  <hr/>
                  <Link to ='/cart'><div className="bags">My Bags <div>
                 
-                     { this.props.shoppingCart.reduce((sum, item) =>{
+                     ({ this.props.shoppingCart.reduce((sum, item) =>{
                         console.log("qty", item.qty)
                         return  sum + (item.qty) 
                     },0)
-                    }
+                    })
                     </div></div></Link>  
                 </div> 
                 {/* <button onClick={()=>{ axios.get('/api/test')} }>test</button> */}

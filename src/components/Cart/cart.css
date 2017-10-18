@@ -108,7 +108,7 @@ width: 100%;
 	padding:10px 10px;
 	
 }
-.one:first-child{
+.one:first-of-type{
 	border-top: 1px solid #b7b7b7;
 }
 
@@ -131,7 +131,7 @@ width: 100%;
 	padding:10px 10px;	
 }
 
-.two:first-child{
+.two:first-of-type{
 	border-top: 1px solid #b7b7b7;
 }
 
@@ -156,7 +156,7 @@ width: 100%;
 	
 }
 
-.three:first-child{
+.three:first-of-type{
 	border-top: 1px solid #b7b7b7;
 }
 
@@ -187,7 +187,7 @@ width: 100%;
 	border-collapse: collapse;
 	
 }
-.four:first-child{
+.four:first-of-type{
 	border-top: 1px solid #b7b7b7;
 }
 
@@ -212,7 +212,7 @@ width: 100%;
 	border-collapse: collapse;
 }
 
-.five:first-child{
+.five:first-of-type{
 	border-top: 1px solid #b7b7b7;
 }
 
