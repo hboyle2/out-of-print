@@ -23,14 +23,9 @@ class Product extends Component {
         const {shirt} = this.props
        
             return( <div  className='item' >
-
-              <Link to = {`/collections/womens-tees/products/${shirt.slug}`} >
-             
-             
-               {/* <div><img alt='' src={shirt.img}/></div> */}
-               <div onMouseOver={this.mouseOver} onMouseOut = {this.mouseOut}>
+                <Link to = {`/collections/womens-tees/products/${shirt.slug}`} >
+            <div onMouseOver={this.mouseOver} onMouseOut =      {this.mouseOut}>
             {this.state.hover ? (<img alt="" src={shirt.img2}/>) : (<img  alt="" src={shirt.img}/>)}</div>
-               {/* {this.state.hover ? (<img src={shirt.img}/>) : (<img src={shirt.img2}/>)}  */}
                 <div>{shirt.name}</div>
                 <div>{shirt.gender} {shirt.type}</div>
                 
@@ -43,3 +38,5 @@ class Product extends Component {
 }
 
 export default Product;
+{/* {this.state.hover ? (<img src={shirt.img}/>) : (<img src={shirt.img2}/>)}  */}
+{/* <div><img alt='' src={shirt.img}/></div> */}
