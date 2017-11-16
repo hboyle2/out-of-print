@@ -42,28 +42,33 @@ Values
 ('moonraker-mens-book-t-shirt', 'MoonRaker', 't-shirt', 'white', 'unisex', 'https://cdn.shopify.com/s/files/1/0380/6785/products/B-1156-Moonraker-Bond-Mens-Unisex-Book-Cover-Tee_1_2048x2048.jpg?v=1479328337', null, 28),
 ('beowulf-mens-book-t-shirt','Beowulf','t-shirt', 'indigo', 'unisex','https://cdn.shopify.com/s/files/1/0380/6785/products/B-1144_Beowulf_Mens_Book_T-Shirt_01_2048x2048.jpg?v=1466514584','https://cdn.shopify.com/s/files/1/0380/6785/products/B-1144_Beowulf_Mens_Book_T-Shirt_02_2048x2048.jpg?v=1466514586', 28),
 ('the-body-in-the-library-mens-book-t-shirt', 'The Body in the Library', 't-shirt', 'black', 'unisex', 'https://cdn.shopify.com/s/files/1/0380/6785/products/B-1162_The-Body-in-the-Library-Agatha-Christie-unisex-book-cover-t-shirt_01_2048x2048.jpg?v=1489084500','https://cdn.shopify.com/s/files/1/0380/6785/products/B-1162_The-Body-in-the-Library-Agatha-Christie-unisex-book-cover-t-shirt_02_2048x2048.jpg?v=1489084500', 28);
+('the-little-prince-unisex-sweatshirt','THE LITTLE PRINCE UNISEX SWEATSHIRT','sweatshirt','navy','womens', 'https://cdn.shopify.com/s/files/1/0380/6785/products/U-3002-The-Little-Prince-unisex-sweatshirt_1_2048x2048.jpg?v=1475249829','https://cdn.shopify.com/s/files/1/0380/6785/products/Womens_Fleece_Little-Prince_websize_2048x2048.jpg?v=1475608272',42),
+('frankenstein-womens-book-t-shirt','Frankenstein','t-shirt','black','womens', 'https://cdn.shopify.com/s/files/1/0380/6785/products/L-1230_Frankenstein-womens-book-cover-black-t-shirt_01_2048x2048.jpg?v=1507654699','https://cdn.shopify.com/s/files/1/0380/6785/products/L-1230_Frankenstein-womens-book-cover-black-t-shirt_02_2048x2048.jpg?v=1507654707',28),
 
--- create table lineItems(
--- id Serial Primary Key,
--- product_id INT REFERENCES items (id),
--- order_id INT REFERENCES orders (id),
--- Qty INT
--- );
 
--- create table orders (
--- id serial primary key,
--- shipping VARCHAR(500),
--- billing VARCHAR(500),
--- order_date DATE,
--- total int,
--- userid int REFERENCES users (id)
--- );
 
--- create table users(
--- id serial primary key,
--- firstname VARCHAR(40),
--- lastname VARCHAR(40),
--- email VARCHAR(300),
--- password VARCHAR (20)
--- )
+
+create table lineItems(
+id Serial Primary Key,
+product_id INT REFERENCES items (id),
+order_id INT REFERENCES orders (id),
+Qty INT
+);
+
+create table orders (
+id serial primary key,
+shipping VARCHAR(500),
+billing VARCHAR(500),
+order_date DATE,
+total int,
+userid int REFERENCES users (id)
+);
+
+create table users(
+id serial primary key,
+firstname VARCHAR(40),
+lastname VARCHAR(40),
+email VARCHAR(300),
+password VARCHAR (20)
+)
 

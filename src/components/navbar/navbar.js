@@ -35,7 +35,7 @@ export default class Navbar extends Component {
                     <li id='title'>Women</li>
                     <Link to ="/collections/womens-tees"><li>T-Shirts</li></Link>
                     <li>Long-Sleeve</li>
-                    <li>Sweatshirts</li>
+                    <Link to ="/collections/womens-sweatshirts"><li>Sweatshirts</li></Link>
                     <li>Socks</li>
                     <li>Scarves</li>
                     <li>Leggings</li>

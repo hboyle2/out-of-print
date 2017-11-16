@@ -31,7 +31,10 @@ module.exports = {
              res.send(items[0]);
          }).catch((err)=> {console.log(err)})
      },  
-        getOrder(req,res){
+        
+     
+     
+     getOrder(req,res){
         const db = req.app.get('db');
         const {shipping ,billing, order_date, total} =req.body;
 
