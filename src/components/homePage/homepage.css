@@ -4,12 +4,9 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
-    align-content: stretch;
-    /* height: 1444px;
-    width: 1045px; */
-    /* margin: 20px 152px 50px 152px; */
-   
+    align-content: stretch;   
 }
+
 #index{
     float: left;
     margin:0 11px 50px 11px;
@@ -19,6 +16,7 @@
     border-bottom: 1px solid #000000;
     
 }
+
 #promo-banner{
     background-color: #103746;
     background-image: url(https://cdn.shopify.com/s/files/1/0380/6785/t/30/assets/banner-edge.png?6410369661147204661);
@@ -97,10 +95,3 @@ form{
    
 }
 
-/* @media (max-width:1000px) {
-    .promo-images img {
-        
-        height: auto;
-        width: 100%
-    }
-    } */
