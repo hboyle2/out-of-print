@@ -12,26 +12,16 @@ class SingleView extends Component {
         }
     }
 
-    
+   //view individual item based on unique identifier 
     componentDidMount(){
-       
-         
-                axios.get(`/api/item/${this.props.match.params.slug}`).then(response=>{
-                    this.setState({
-                        item: response.data
-                    })
-                  console.log(response.data)
-               
-            })
-           
-        }
+     axios.get(`/api/item/${this.props.match.params.slug}`).then(response=>{
+          this.setState({
+          item: response.data
+         })
+         console.log(response.data)
+       })
+      }
 
-
-        
-      
-    
-
-    
     render() {
         const item=this.state.item
        
