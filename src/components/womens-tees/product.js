@@ -20,7 +20,7 @@ class Product extends Component {
         this.setState({hover: false});
     }
     
-    //then mouse hovers over image the image will change to person view
+    //when mouse hovers over image the image will change to person view
     render() {
         const {shirt} = this.props
        
