@@ -15,7 +15,6 @@ class Footer extends Component {
                         <li>Returns</li>
                         <li>Catalog</li>
                         <li>Wholesale</li>
-                        {/* <li>844.667.7468</li> */}
                     </ul>
                 </div>
                 <div className="apparel">
@@ -58,16 +57,9 @@ class Footer extends Component {
                     <li><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
                 </ul>
                 </div>
-              
-                
-                </div>
-               
-               
-              
-                </div>
-                
-                
-            </div>
+         </div>
+         </div>
+       </div>
         );
     }
 }
