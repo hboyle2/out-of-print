@@ -32,40 +32,15 @@ module.exports = {
          }).catch((err)=> {console.log(err)})
      },  
         
-     
-     
-     getOrder(req,res){
-        const db = req.app.get('db');
-        const {shipping ,billing, order_date, total} =req.body;
-
-        db.get_order([shipping ,billing, order_date, total])
-        .then((order)=> { res.send(order);
-       }).catch((err) => {console.log(err);});
-    },
-
-    // checkuser(){
-        
-    //     // console.log( "check", req.user)        
-    //     const db = req.app.get('db');
-    //     db.get_cart([req.user.id]).then((cart)=>{
-           
-    //       if(cart[0]){
-    //         console.log('found cart!')
-    //       } else{
-    //           console.log('not found')
-    //       } 
-          
-    //     })
-    // },
-
-
     addToCart(req,res){
         const db = req.app.get('db');
         const { product_id} = req.body;
         console.log("adfskj;fask", req.user)
         db.get_cart([req.user.id]).then((cart)=>{
+            //get cart based on user
             if(cart[0]){
-                // console.log(cart[0])
+              //check if user exists already  
+              //if item is already in the cart check for duplicates. If duplicated update qty
              db.check_duplicates([product_id, cart[0].id]).then((dup)=>{
                 if(dup[0]){
                     console.log(dup[0].qty)
@@ -81,6 +56,7 @@ module.exports = {
                         console.log(err)
                     })
                     console.log("duplicate!")
+                //If the item is not in the cart add it to cart
                 } else {
                     db.add_to_cart([product_id, cart[0].id]).then(()=>{
                         db.return_cart([cart[0].id]).then((cartItems)=>{
@@ -95,8 +71,9 @@ module.exports = {
              }).catch((err)=>{
                  console.log(err)
              })
+            //If user has not purchased anything make a cart    
             } else{
-                db.make_order([req.user.id]).then(()=>{
+              db.make_order([req.user.id]).then(()=>{
                     db.get_cart([req.user.id]).then((cart)=>{
                         console.log(cart)
                         db.add_to_cart([product_id, cart[0].id]).then(()=>{
