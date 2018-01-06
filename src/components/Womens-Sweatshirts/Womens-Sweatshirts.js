@@ -32,23 +32,6 @@ export default class WomensSweatshirts extends Component {
             </div>
        
         );
-        // const sweatshirts = this.state.shirts.map((shirt)=>{
-        //     return( <div key={shirt.id} className='item' >
-
-        //       <Link to = {`/collections/womens-tees/products/${shirt.slug}`}>
-             
-        //        <div><img alt = '' src={shirt.img}/></div>
-        //         <div>{shirt.name}</div>
-        //         <div>{shirt.gender}</div>
-        //         </Link>
-        //         <div>${shirt.price}</div>
-        //          </div>)
-        // })
-        // return (
-        //     <div>
-        //         {sweatshirts}
-        //     </div>
-        // );
     }
 }
 
